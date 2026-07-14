@@ -43,8 +43,8 @@ MyTea POS adalah aplikasi kasir mobile pintar yang dirancang khusus untuk operas
 
 1. **Clone Repositori**
    ```Bash
-   git clone [https://github.com/username/mytea-pos-app.git](https://github.com/username/mytea-pos-app.git)
-   cd MyTea_POS_App
+   git clone https://github.com/mhluck/mytea_pos_app.git
+   cd mytea_pos_app
    ```
 
 2. **Instalasi Dependencies**
@@ -53,19 +53,19 @@ MyTea POS adalah aplikasi kasir mobile pintar yang dirancang khusus untuk operas
     ```
 
 3. **Jalankan Mode Web Browser**
-```Bash
-npm run dev
-```
+    ```Bash
+    npm run dev
+    ```
 
 4. **Sinkronisasi ke Perangkat Mobile (Capacitor)**
-```Bash
-npm run build
-```
+    ```Bash
+    npm run build
+    ```
 
 5. **Buka Android Studio / Xcode menggunakan perintah**:
-```Bash
-npx cap open android
-```
+    ```Bash
+    npx cap open android
+    ```
 ---
 
 ## ⚙️ Panduan Konfigurasi Sinkronisasi Cloud
