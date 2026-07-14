@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">My Tea</string>
+    <string name="title_activity_main">My Tea</string>
+    <string name="package_name">com.luqman.mytea</string>
+    <string name="custom_url_scheme">com.luqman.mytea</string>
+</resources>

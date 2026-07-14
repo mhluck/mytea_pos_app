@@ -1,0 +1,108 @@
+:root {
+  --primary-color: #51B154;
+  --text-dark: #000000;
+  --text-light: #7E7E7E;
+  --danger-color: #FF0000;
+  --bg-color: #F8F9FA;
+  --card-bg: #FFFFFF;
+  --border-radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  max-width: 480px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0 auto;
+  position: relative;
+  overflow-x: hidden;
+  /* Mobile dimensions for preview */
+  max-width: 480px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.page-container {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+button:active, .product-card:active, .transaction-card:active {
+  transform: scale(0.96);
+  opacity: 0.8;
+  transition: all 0.1s ease-in-out;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 12px 24px;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  font-size: 16px;
+  transition: opacity 0.2s;
+  width: 100%;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-danger {
+  background-color: var(--danger-color);
+  color: white;
+  padding: 12px 24px;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  font-size: 16px;
+  transition: opacity 0.2s;
+}
+
+.btn-danger:hover {
+  opacity: 0.9;
+}
+
+input, select {
+  font-family: 'Poppins', sans-serif;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 14px;
+  background-color: var(--card-bg);
+  color: var(--text-dark);
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}

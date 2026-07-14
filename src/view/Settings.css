@@ -1,0 +1,569 @@
+.settings-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #ffffff;
+  font-family: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  overflow: hidden;
+}
+
+/* We override the absolute positioning if we just want it to be a normal block in page-container.
+   Actually, page-container might already have flex constraints. 
+   Let's make sure it scrolls properly. */
+.settings-container {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding-bottom: 16px;
+}
+
+.settings-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background-color: #ffffff;
+  flex-shrink: 0;
+}
+
+.settings-back-btn {
+  cursor: pointer;
+  color: #333;
+}
+
+.settings-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.settings-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.settings-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0f0f0;
+}
+
+.settings-section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+  margin-top: 0;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 8px;
+}
+
+.settings-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.settings-form-group:last-child {
+  margin-bottom: 0;
+}
+
+.settings-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+}
+
+.settings-input,
+.settings-textarea,
+.settings-select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+  background-color: #fafafa;
+  transition: border-color 0.2s, background-color 0.2s;
+  box-sizing: border-box;
+}
+
+.settings-textarea {
+  min-height: 80px;
+  resize: none;
+}
+
+.settings-input:focus,
+.settings-textarea:focus,
+.settings-select:focus {
+  outline: none;
+  border-color: var(--primary-color, #4a90e2);
+  background-color: #ffffff;
+}
+
+.settings-file-input {
+  display: none;
+}
+
+.settings-image-uploader {
+  border: 2px dashed #d9d9d9;
+  border-radius: 12px;
+  aspect-ratio: 1/1;
+  max-width: 150px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  background-color: #fafafa;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.settings-image-uploader:hover {
+  border-color: #b0b0b0;
+  background-color: #f0f0f0;
+}
+
+.settings-image-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: #888;
+}
+
+.settings-logo-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.settings-qris-uploader {
+  border: 2px dashed #d9d9d9;
+  border-radius: 12px;
+  height: 200px;
+  width: max-content;
+  align-self: center;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  background-color: #fafafa;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.settings-qris-uploader:hover {
+  border-color: var(--primary-color, #4a90e2);
+  background-color: #f0f8ff;
+}
+
+.settings-qris-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.settings-printer-row {
+  display: flex;
+  gap: 8px;
+}
+
+.settings-select {
+  flex: 1;
+}
+
+.settings-btn-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  background-color: #f0f0f0;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.settings-btn-secondary:hover {
+  background-color: #e4e4e4;
+}
+
+.settings-btn-secondary:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.settings-help-text {
+  font-size: 12px;
+  color: #888;
+  margin: 0;
+}
+
+.settings-btn-primary {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--primary-color, #4a90e2);
+  color: #ffffff;
+  border: none;
+  flex-shrink: 0;
+}
+
+.settings-back-btn {
+  cursor: pointer;
+  color: #333;
+}
+
+.settings-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.settings-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.settings-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0f0f0;
+}
+
+.settings-section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+  margin-top: 0;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 8px;
+}
+
+.settings-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.settings-form-group:last-child {
+  margin-bottom: 0;
+}
+
+.settings-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+}
+
+.settings-input,
+.settings-textarea,
+.settings-select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+  background-color: #fafafa;
+  transition: border-color 0.2s, background-color 0.2s;
+  box-sizing: border-box;
+}
+
+.settings-textarea {
+  min-height: 80px;
+  resize: none;
+}
+
+.settings-input:focus,
+.settings-textarea:focus,
+.settings-select:focus {
+  outline: none;
+  border-color: var(--primary-color, #4a90e2);
+  background-color: #ffffff;
+}
+
+.settings-file-input {
+  display: none;
+}
+
+.settings-image-uploader {
+  border: 2px dashed #d9d9d9;
+  border-radius: 12px;
+  aspect-ratio: 1/1;
+  max-width: 150px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  background-color: #fafafa;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.settings-image-uploader:hover {
+  border-color: #b0b0b0;
+  background-color: #f0f0f0;
+}
+
+.settings-image-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: #888;
+}
+
+.settings-logo-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.settings-qris-uploader {
+  border: 2px dashed #d9d9d9;
+  border-radius: 12px;
+  height: 200px;
+  width: max-content;
+  align-self: center;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  background-color: #fafafa;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.settings-qris-uploader:hover {
+  border-color: var(--primary-color, #4a90e2);
+  background-color: #f0f8ff;
+}
+
+.settings-qris-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.settings-printer-row {
+  display: flex;
+  gap: 8px;
+}
+
+.settings-select {
+  flex: 1;
+}
+
+.settings-btn-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  background-color: #f0f0f0;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.settings-btn-secondary:hover {
+  background-color: #e4e4e4;
+}
+
+.settings-btn-secondary:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.settings-help-text {
+  font-size: 12px;
+  color: #888;
+  margin: 0;
+}
+
+.settings-btn-primary {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--primary-color, #4a90e2);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(74, 144, 226, 0.3);
+  transition: transform 0.1s, opacity 0.2s;
+}
+
+.settings-btn-primary:active {
+  transform: scale(0.98);
+}
+
+.settings-btn-primary:hover {
+  opacity: 0.9;
+}
+
+.settings-btn-cancel {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #f5f5f5;
+  color: #333;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  padding: 14px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.settings-btn-cancel:active {
+  transform: scale(0.98);
+}
+
+.settings-btn-cancel:hover {
+  background-color: #e4e4e4;
+}
+
+/* Simple Loader */
+.settings-loader {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #666;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: settings-rotation 1s linear infinite;
+}
+
+@keyframes settings-rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Crop Modal Styles */
+.crop-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px;
+}
+
+.crop-modal-content {
+  background-color: #fff;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.crop-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.crop-modal-header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.crop-modal-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+.crop-container-wrapper {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background-color: #333;
+}
+
+.crop-modal-actions {
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.crop-modal-actions button {
+  flex: 1;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.btn-secondary {
+  flex: 1;
+  padding: 12px 24px;
+  border-radius: var(--border-radius);
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #f5f5f5;
+  color: var(--text-dark);
+}
+
+.modal-actions .btn-primary {
+  flex: 1;
+}
